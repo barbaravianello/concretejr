@@ -36,7 +36,11 @@ debounce = function(func, wait, immediate) {
 
 	$(document).scroll(debounce(function(){
 		animeScroll();
+<<<<<<< HEAD
 	}, 30));
+=======
+	}, 100));
+>>>>>>> 0e32d3abbdb3f4976f4353cb680786228404e131
 })();
 
 // Portfolio
