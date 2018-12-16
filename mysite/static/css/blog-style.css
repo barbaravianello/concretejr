@@ -1,0 +1,305 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Exo+2|Source+Sans+Pro');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444444;
+}
+
+/* Configurações Gerais */
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 6px 12px 9px 12px;
+    font-size: 16px;
+    border-radius: 2px;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 15px;
+    }
+}
+
+.back-to-top:focus {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    outline: none;
+}
+
+.back-to-top:hover {
+    background-color: #1b3282;
+    color: #fff;
+}
+
+.menu-icon {
+    line-height: 60px;
+    width: 100%;
+    background: #fff;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 17px 24px;
+    cursor: pointer;
+    color: #1b3282;
+    display: none;
+}
+
+/* Icone responsivo */
+
+#logo {
+    margin-left: 50px;
+}
+
+#logo img{
+    margin-top: -20px;
+    width: 180px;
+}
+
+/* Logo - Topo */
+
+#menu {
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+}
+
+/* Menu - Topo */
+
+.btn-top {
+    float: right;
+    margin-top: -80px;
+    margin-right: 20px;
+    border: none;
+    padding: 12px 32px;
+    color: #fff;
+    background-color: #aaaaaa;
+    border-radius: 4px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.btn-top:hover {
+    color: #fff;
+    background-color: #1b3282;
+    transition: 0.8s;
+}
+
+
+.btn-top2 {
+    float: right;
+    margin-top: -80px;
+    margin-right: 150px;
+    border: none;
+    padding: 12px 32px;
+    color: #fff;
+    background-color: #777777;
+    border-radius: 4px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.btn-top2:hover {
+    color: #fff;
+    background-color: #1b3282;
+    transition: 0.8s;
+}
+
+/* Botão - WhatsApp */
+
+@media(max-width: 786px) {
+
+    #logo {
+        margin-top: -90px;
+        margin-left: -20px;
+    }
+
+    #menu{
+        height: 100px;
+    }
+
+    .showing {
+        margin-top: -1000px;
+        max-height: 1px;
+    }
+
+    .btn-top {
+        margin-right: 100px;
+        background-color: #1b3282;
+        color: #fff;
+    }
+
+    .btn-top:hover {
+        color: #fff;
+        background-color: #000;
+        transition: 0.8s;
+    }
+
+    .btn-top2 {
+        margin-right: 250px;
+        background-color: #1b3282;
+        color: #fff;
+    }
+
+    .btn-top2:hover {
+        color: #fff;
+        background-color: #000;
+        transition: 0.8s;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+}
+
+/* Menu */
+
+#blog {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    background-color: #ccc;
+}
+
+#blog .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.box{
+    margin: 10px auto;
+    position: relative;
+}
+
+.minibox{
+    font-family: 'Exo 2',sans-serif;
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: 56%;
+    left: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F4F4F4;
+}
+
+.minibox:hover{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98.9%;
+    justify-content: center;
+    transition: all 0.5s;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.minibox a{
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 18px;
+    color: #000;
+    letter-spacing: 3px;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.minibox a:hover{
+    opacity: 1;
+}
+
+.minibox p{
+    margin-top: 3px;
+    text-align: justify;
+}
+.minibox .btn-box{
+    margin-top: 10px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    padding: 4px 32px;
+    background-color: #222222;
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.minibox .btn-box:hover{
+    color: #000;
+    background-color: #fff;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+}
+
+footer .media ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+footer .media ul li {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+footer .media ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    opacity: 0.8;
+    transition: all 0.2s;
+}
+
+footer .media ul li a:hover {
+    opacity: 1;
+}
+
+footer p {
+    text-align: center;
+    font-family: 'Exo 2', sans-serif;
+    color: #000;
+    font-size: 14px;
+}
+
+footer p a {
+    text-decoration: none;
+    font-family: 'Exo 2', sans-serif;
+    color: #FFD000;
+    font-size: 14px;
+}

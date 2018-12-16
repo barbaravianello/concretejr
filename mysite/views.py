@@ -2,11 +2,11 @@
 from django.shortcuts import render
 from django.shortcuts import render_to_response
 from .models import Inicio, Quemsomos, Servicos, Portfolio, Depoimentos, Parceiros
-#from django.http import HttpResponse
+from .forms import ContactForm
 
 def index(request):
-    inicio = Inicio.objects.all()
-    quemsomos = Quemsomos.objects.all()
+    inicio = Inicio.objects.last()
+    quemsomos = Quemsomos.objects.last()
     portfolio = Portfolio.objects.all()
     servicos = Servicos.objects.all() 
     depoimentos = Depoimentos.objects.all()
@@ -17,8 +17,18 @@ def index(request):
         'quemsomos':quemsomos,
         'portfolio':portfolio,
         'servicos':servicos,
-        'depoimentos':depoimentos,  
+        'depoimentos':depoimentos,
         'parceiros':parceiros,
     }
-       
-    return render(request, 'index.html', context) 
+    
+    if request.method == 'POST':
+        form = ContactForm(request.POST or None)
+        if form.is_valid():
+            context['is valid'] = True
+            form.send_mail()
+            form = ContactForm()
+    else:
+        form = ContactForm()
+
+    context['form'] = form
+    return render(request, 'index.html', context)
