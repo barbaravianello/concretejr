@@ -10,7 +10,7 @@ class ContactForm(forms.Form):
 	empresa = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
 	telefone = forms.IntegerField(widget=forms.TextInput(attrs={'class': 'form-control'}))
 #	sbjct = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Assunto', 'data-rule':'minlen:4', 'data-msg': 'Por favor, insira pelo menos 8 caracteres no assunto.'}))
-	mensage = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control', 'rows': '5', 'data-rule':'required', 'data-msg': 'Por favor, insira sua mensagem.'}))
+	message = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control', 'rows': '5', 'data-rule':'required', 'data-msg': 'Por favor, insira sua mensagem.'}))
 
 	def send_mail(self):
 		message = '------------------------------------------------------------------------------\n'
@@ -25,7 +25,7 @@ class ContactForm(forms.Form):
 			'email': self.cleaned_data['email'],
 			'empresa': self.cleaned_data['empresa'],
 			'telefone': self.cleaned_data['telefone'],
-			'mensage': self.cleaned_data['mensage'],
+			'message': self.cleaned_data['message'],
 		}
 		
 		subject = "Novo e-mail no site da Concrete"

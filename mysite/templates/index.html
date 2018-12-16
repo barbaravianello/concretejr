@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicon/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon/favicon.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}">
-    <link rel="manifest" href="/site.webmanifest">
+
     <!-- Favicon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
@@ -91,12 +91,12 @@
         <div id="filter">
             <button class="btn active" onclick="filterSelection('all')">Todos</button>
             {% for port in portfolio %}
-                <button class="btn" onclick="filterSelection('natal')">{{port.titulo}}</button>
+                <button class="btn" onclick="filterSelection('{{port.titulo}}')">{{port.titulo}}</button>
             {% endfor %}
         </div>
         <div class="row">
         {% for port in portfolio %}
-            <div class="column ">
+            <div class="column {{port.titulo}} ">
                 <div class="content">
                     <img src="{{port.imagem.url}}" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="Car" style="width:100%">
                     <h4>{{port.titulo}}</h4>
@@ -156,6 +156,72 @@
     
     <!-- Parceiros -->
 
+ <!--   <section id="contato" class="animou">
+        <div class="container">
+            <div class="wrapper animated bounceInLeft">
+                <div class="info">
+                    <h3>Informações</h3>
+                    <ul>
+                        <li><i class="fa fa-road"></i> Av. Coronel Norton Chaves, 749 - Natal/RN</li>
+                        <br>
+                        <li><i class="fa fa-phone"></i> (84) 99999-9999</li>
+                        <br>
+                        <li><i class="fa fa-envelope"></i> exemplo@emal.com</li>
+                    </ul>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.1644716303326!2d-35.207555285643!3d-5.832424059118024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff9268f0e61d%3A0x85af869d288f334e!2sEmpresa+J%C3%BAnior+da+Escola+de+Ci%C3%AAncias+e+Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1543878765780"
+                        width="360px" height="270px" frameborder="0" id="mapa" style="border:0; margin-left: -10px; margin-top: 25px;"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="contato-cont">
+                    <h3>Contate-nos</h3>
+                    <form action="" method="POST" role="form">
+                        {% csrf_token %}
+                        {%if is_valid %}
+                            <script>
+                                alert("Sua mensagem foi enviada com sucesso. A Concrete agradece o contato!");
+                            </script>
+                        {% endif %}
+
+                        <fieldset >
+
+                                <p>
+                                    <label for="{{ field.nome }}"><i class="fas fa-signature"></i> Nome:</label>
+                                    <input type="text" name="nome">
+                                </p>
+                                <p>
+                                    <label for="{{ field.email }}"><i class="fas fa-at"></i> Email:</label>
+                                    <input type="email" name="email">
+                                </p>
+                                <p>
+                                    <label for="{{ field.empresa }}"><i class="fas fa-building"></i> Empresa:</label>
+                                    <input type="text" name="empresa">
+                                </p>
+                                <p>
+                                    <label for="{{ field.telefone }}"><i class="fas fa-phone"></i> Telefone:</label>
+                                    <input type="tel" name="telefone">
+                                </p>
+                                <p class="full">
+                                    <label for="{{ field.mensage }}"><i class="fas fa-envelope-open"></i> Mensagem:</label>
+                                    <textarea name="mensagem" rows="5"></textarea>
+                                </p>
+
+
+                            {% if field.errors %}
+                                <label for="errors">{{ field.errors }}</label><br><br>
+                            {% endif %}
+
+                        </fieldset>
+
+                        <p class="full">
+                            <button type="submit">Enviar</button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
     <section id="contato" class="animou">
         <div class="container">
             <div class="wrapper animated bounceInLeft">
@@ -174,50 +240,33 @@
                 </div>
                 <div class="contato-cont">
                     <h3>Contate-nos</h3>
-                    <form action="" method="post" role="form">
+                    <form method="POST">
                         {% csrf_token %}
                         {%if is_valid %}
                             <script>
                                 alert("Sua mensagem foi enviada com sucesso. A Concrete agradece o contato!");
                             </script>
                         {% endif %}
-
-                        <fieldset>
-                        {% for field in form %}
-                            {% if field.label == 'Mensage' %}
-                                <p>
-           <!-->                    <label><i class="fas fa-signature"></i> Nome:</label>  -->
-                                    <label for="{{ field.nome }}"><i class="fas fa-signature"></i>{{ field.nome }}</label>
-                                    <input type="text" name="nome">
-                                </p>
-                                <p>
-           <!-->                    <label><i class="fas fa-at"></i> E-mail:</label>  -->
-                                    <label for="{{ field.email }}"><i class="fas fa-at"></i>{{ field.email }}</label>
-                                    <input type="email" name="email">
-                                </p>
-                                <p>
-           <!-->                    <label><i class="fas fa-building"></i> Empresa:</label>  -->
-                                    <label for="{{ field.empresa }}"><i class="fas fa-building"></i>{{ field.empresa }}</label>
-                                    <input type="text" name="empresa">
-                                </p>
-                                <p>
-           <!-->                    <label><i class="fas fa-phone"></i> Telefone:</label>  -->
-                                    <label for="{{ field.telefone }}"><i class="fas fa-phone"></i>{{ field.telefone }}</label>
-                                    <input type="tel" name="telefone">
-                                </p>
-                                <p class="full">
-           <!-->                    <label><i class="fas fa-envelope-open"></i> Mensagem:</label>  -->
-                                    <labelfor="{{ field.mensage }}"><i class="fas fa-envelope-open"></i>{{ field.mensage }}</label>
-                                    <textarea name="mensagem" rows="5"></textarea>
-                                </p>
-                            {% endif %}
-
-                            {% if field.errors %}
-                                <label for="errors">{{ field.errors }}</label><br><br>
-                            {% endif %}
-                        {% endfor %}
-                        </fieldset>
-
+                        <p>
+                            <label><i class="fas fa-signature"></i> Nome:</label>
+                            {{form.nome}}
+                        </p>
+                        <p>
+                            <label><i class="fas fa-at"></i> E-mail:</label>
+                            {{form.email}}
+                        </p>
+                        <p>
+                            <label><i class="fas fa-building"></i> Empresa:</label>
+                            {{form.empresa}}
+                        </p>
+                        <p>
+                            <label><i class="fas fa-phone"></i> Telefone:</label>
+                            {{form.telefone}}
+                        </p>
+                        <p class="full">
+                            <label><i class="fas fa-envelope-open"></i> Mensagem:</label>
+                            {{form.message}}
+                        </p>
                         <p class="full">
                             <button type="submit">Enviar</button>
                         </p>
@@ -226,6 +275,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Informações e Contato -->
 
