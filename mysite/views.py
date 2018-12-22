@@ -24,7 +24,7 @@ def index(request):
     if request.method == 'POST':
         form = ContactForm(request.POST or None)
         if form.is_valid():
-            context['is valid'] = True
+            context['is_valid'] = True
             form.send_mail()
             form = ContactForm()
     else:
