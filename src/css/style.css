@@ -478,6 +478,10 @@
     float: left;
     width: 33.33%;
     display: none;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 65139c6997791d6c7edb1f7886f00d6fe543c636
 }
 
 .row:after {
@@ -497,6 +501,7 @@
     height: 250px;
     border-radius: 3px;
     opacity: 0.9;
+<<<<<<< HEAD
 }
 .content img:hover{
     cursor: pointer;
@@ -680,6 +685,816 @@
     margin-top: 50px;
     padding: 30px;
     background-color: #f7f7f7;
+}
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-list:focus {
+    outline: none;
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.slick-track:before,
+.slick-track:after {
+    display: table;
+    content: '';
+}
+
+.slick-track:after {
+    clear: both;
+}
+
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+
+=======
+}
+.content img:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.show {
+    display: block;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #00A5FF;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn.active {
+    background-color: #1b3282;
+    color: white;
+}
+
+/* modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+    padding: 0;
+  }
+  
+  /* botão fechar */
+  .close {
+    color: white;
+    position: absolute;
+    top: 100px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+  }
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    background-color: rgba(27, 50, 130, 0.7);
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: #999;
+  }
+
+  @media(max-width:768px){
+      #portfolio .row{
+        display: flex;
+        flex-direction: column;
+      }
+
+      #portfolio .column{
+          width: 100%;
+      }
+  }
+
+/*#portfolio */
+
+#depoimentos {
+    width: 100%;
+    height: 350px;
+    margin-top: 50px;
+}
+
+.hero {
+    width: 100%;
+    height: 350px;
+    background-color: rgba(27, 50, 130, 0.7);
+    z-index: 999;
+}
+
+#depoimentos .item img {
+    width: 200px;
+    height: 180px;
+    margin-top: 70px;
+    margin-left: 30px;
+    background-color: #ddd;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+
+#depoimentos .depoimento-com {
+    color: #fff;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#depoimentos .nome-com {
+    color: #161616;
+    font-weight: 600;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 18px;
+    text-indent: 20px;
+}
+
+@media (max-width: 768px) {
+    #depoimentos {
+        max-width: 500px;
+    }
+
+    #depoimentos .gallery .item img{
+        margin-left: 3px;
+    }
+
+    #depoimentos .gallery .item .comentario{
+        margin-top: 65px;
+    }
+
+}
+
+/*#depoimentos */
+
+#parceiros {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #f7f7f7;
+}
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-list:focus {
+    outline: none;
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.slick-track:before,
+.slick-track:after {
+    display: table;
+    content: '';
+}
+
+.slick-track:after {
+    clear: both;
+}
+=======
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content {
+    font-family: 'Exo 2', sans-serif;
+    border-radius: 3px;
+    background-color: #ccc;
+    padding: 10px;
+}
+
+.content img{
+    height: 250px;
+    border-radius: 3px;
+    opacity: 0.9;
+}
+.content img:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.show {
+    display: block;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #00A5FF;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn.active {
+    background-color: #1b3282;
+    color: white;
+}
+
+/* modal */
+<<<<<<< HEAD
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+    padding: 0;
+  }
+  
+  /* botão fechar */
+  .close {
+    color: white;
+    position: absolute;
+    top: 100px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+  }
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    background-color: rgba(27, 50, 130, 0.7);
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: #999;
+  }
+
+  @media(max-width:768px){
+      #portfolio .row{
+        display: flex;
+        flex-direction: column;
+      }
+
+      #portfolio .column{
+          width: 100%;
+      }
+=======
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+    padding: 0;
+  }
+  
+  /* botão fechar */
+  .close {
+    color: white;
+    position: absolute;
+    top: 100px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+  }
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    background-color: rgba(27, 50, 130, 0.7);
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: #999;
+>>>>>>> 0e32d3abbdb3f4976f4353cb680786228404e131
+  }
+>>>>>>> cff28f1bf9b77b6bf542e0bddca387185587702b
+
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+
+<<<<<<< HEAD
+>>>>>>> 65139c6997791d6c7edb1f7886f00d6fe543c636
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+<<<<<<< HEAD
+=======
+=======
+#depoimentos {
+    width: 100%;
+    height: 350px;
+    margin-top: 50px;
+    background-image: url('../img/hero.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+>>>>>>> cff28f1bf9b77b6bf542e0bddca387185587702b
+>>>>>>> 65139c6997791d6c7edb1f7886f00d6fe543c636
+}
+
+[dir='rtl'] .slick-slide {
+    float: right;
+<<<<<<< HEAD
+}
+
+.slick-slide img {
+    display: block;
+}
+
+.slick-slide.slick-loading img {
+    display: none;
+}
+
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+=======
+}
+
+.slick-slide img {
+    display: block;
+}
+
+<<<<<<< HEAD
+.slick-slide.slick-loading img {
+    display: none;
+}
+
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+=======
+.hero {
+    width: 100%;
+    height: 350px;
+    background-color: rgba(27, 50, 130, 0.7);
+    z-index: 999;
+}
+
+#depoimentos .img-dep img {
+    width: 200px;
+    height: 180px;
+    margin-top: 70px;
+    margin-left: 30px;
+    background-color: #ddd;
+    border-radius: 100%;
+    object-fit: cover;
+    z-index: 3;
+}
+
+#depoimentos .comentario {
+    margin-top: 120px;
+    margin-left: 50px;
+>>>>>>> cff28f1bf9b77b6bf542e0bddca387185587702b
+>>>>>>> 65139c6997791d6c7edb1f7886f00d6fe543c636
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+
+<<<<<<< HEAD
+.slick-arrow.slick-hidden {
+    display: none;
+=======
+<<<<<<< HEAD
+.slick-arrow.slick-hidden {
+    display: none;
+=======
+@media (max-width: 768px) {
+    #depoimentos {
+        max-width: 500px;
+    }
+
+    #depoimentos .img-dep img {
+        width: 140px;
+        height: 120px;
+        margin-top: 70px;
+        margin-left: 30px;
+        background-color: #ddd;
+        border-radius: 100%;
+        object-fit: cover;
+        z-index: 3;
+    }
+
+    #depoimentos .wrapper-depoi .comentario{
+        max-width: 180px;
+        max-height: 120px;
+        margin-top: 17px;
+    }
+
+>>>>>>> cff28f1bf9b77b6bf542e0bddca387185587702b
+>>>>>>> 65139c6997791d6c7edb1f7886f00d6fe543c636
+}
+
+/* Parceiros */
+
+#parceiros {
+<<<<<<< HEAD
+=======
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    padding: 30px;
+    background-image: url('../img/bg-contato.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-list:focus {
+    outline: none;
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.slick-track:before,
+.slick-track:after {
+    display: table;
+    content: '';
+}
+
+.slick-track:after {
+    clear: both;
+}
+
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+[dir='rtl'] .slick-slide {
+    float: right;
+}
+
+.slick-slide img {
+    display: block;
+}
+
+.slick-slide.slick-loading img {
+    display: none;
+}
+
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+/* Parceiros */
+
+#contato {
+>>>>>>> 0e32d3abbdb3f4976f4353cb680786228404e131
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    padding: 30px;
+    background-image: url('../img/bg-contato.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .slick-slide {
