@@ -1,0 +1,111 @@
+<section id="depoimentos" class="animou">
+
+        <div class="gallery autoplay items-2">
+            <div id="item-1" class="control-operator"></div>
+            <div id="item-2" class="control-operator"></div>
+
+            <figure class="item">
+                <img src="img/perfil.jpg" alt="Depoimento">
+                <div class="comentario">
+                    <p class="depoimento-com">"A vida é um sopro, um minuto. A gente nasce, morre. O ser humano é um
+                        ser
+                        completamente abandonado..."</p>
+                    <p class="nome-com"> &lt; Oscar Niemeyer, Rio de Janeiro/RJ &gt;</p>
+                </div>
+            </figure>
+
+            <figure class="item">
+                <img src="img/perfil2.jpg" alt="Depoimento">
+                <div class="comentario">
+                    <p class="depoimento-com">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam mollitia
+                        rem
+                        ipsum laudantium, hic similique. "</p>
+                    <p class="nome-com"> &lt; Lorem ipsum dolor sit &gt;</p>
+                </div>
+            </figure>
+
+            <div class="controls">
+                <a href="#item-1" class="control-button">•</a>
+                <a href="#item-2" class="control-button">•</a>
+            </div>
+</section>
+
+
+$(document).ready(function () {
+  $('a[href^="#quem-somos"] , a[href^="#servicos"] , a[href^="#portfolio"] , a[href^="#depoimentos"] , a[href^="#parceiros"]  , a[href^="#contato"]').on('click', function (e) {
+    e.preventDefault();
+
+    var target = this.hash;
+    var $target = $(target);
+
+    $('html, body').animate({
+      'scrollTop': $target.offset().top - 70
+    }, 1000, 'swing');
+  });
+});
+
+
+
+
+#depoimentos {
+    width: 100%;
+    height: 350px;
+    margin-top: 50px;
+}
+
+.hero {
+    width: 100%;
+    height: 350px;
+    background-color: rgba(27, 50, 130, 0.7);
+    z-index: 999;
+}
+
+#depoimentos .item img {
+    width: 200px;
+    height: 180px;
+    margin-top: 70px;
+    margin-left: 30px;
+    background-color: #ddd;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+
+#depoimentos .depoimento-com {
+    color: #fff;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#depoimentos .nome-com {
+    color: #161616;
+    font-weight: 600;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 18px;
+    text-indent: 20px;
+}
+
+@media (max-width: 768px) {
+    #depoimentos {
+        max-width: 500px;
+    }
+
+    #depoimentos .gallery .item img{
+        margin-left: 3px;
+    }
+
+    #depoimentos .gallery .item .comentario{
+        margin-top: 65px;
+    }
+
+}
+
+
+
+
+
+
+
+
