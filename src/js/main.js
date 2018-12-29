@@ -36,7 +36,15 @@ debounce = function(func, wait, immediate) {
 
 	$(document).scroll(debounce(function(){
 		animeScroll();
+<<<<<<< HEAD
 	}, 30));
+=======
+<<<<<<< HEAD
+	}, 30));
+=======
+	}, 100));
+>>>>>>> 0e32d3abbdb3f4976f4353cb680786228404e131
+>>>>>>> cff28f1bf9b77b6bf542e0bddca387185587702b
 })();
 
 // Portfolio
@@ -121,7 +129,11 @@ $(document).ready(function () {
 // Menu navegação 
 
 $(document).ready(function () {
+<<<<<<< HEAD
   $('a[href^="#quem-somos"] , a[href^="#servicos"] , a[href^="#portfolio"] , a[href^="#depoimentos"] , a[href^="#parceiros"]  , a[href^="#contato"]').on('click', function (e) {
+=======
+  $('a[href^="#"]').on('click', function (e) {
+>>>>>>> cff28f1bf9b77b6bf542e0bddca387185587702b
     e.preventDefault();
 
     var target = this.hash;

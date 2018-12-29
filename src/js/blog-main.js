@@ -8,7 +8,15 @@ $(document).ready(function () {
 jQuery(document).ready(function () {
     // Exibe ou oculta o botão
     jQuery(window).scroll(function () {
+<<<<<<< HEAD
       if (jQuery(this).scrollTop() > 100) {
+=======
+<<<<<<< HEAD
+      if (jQuery(this).scrollTop() > 100) {
+=======
+      if (jQuery(this).scrollTop() > 200) {
+>>>>>>> 0e32d3abbdb3f4976f4353cb680786228404e131
+>>>>>>> cff28f1bf9b77b6bf542e0bddca387185587702b
         jQuery('.back-to-top').fadeIn(200);
       } else {
         jQuery('.back-to-top').fadeOut(200);
