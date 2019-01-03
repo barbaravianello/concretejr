@@ -121,7 +121,7 @@ $(document).ready(function () {
 // Menu navegação 
 
 $(document).ready(function () {
-  $('a[href^="#"]').on('click', function (e) {
+  $('a[href^="#quem-somos"] , a[href^="#servicos"] , a[href^="#portfolio"] , a[href^="#depoimentos"] , a[href^="#parceiros"]  , a[href^="#contato"]').on('click', function (e) {
     e.preventDefault();
 
     var target = this.hash;

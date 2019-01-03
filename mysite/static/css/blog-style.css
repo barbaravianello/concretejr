@@ -25,7 +25,11 @@
 .back-to-top {
     position: fixed;
     display: none;
+<<<<<<< HEAD
     background-color: rgba(0, 0, 0, 0.9);
+=======
+    background-color: rgba(0, 0, 0, 0.2);
+>>>>>>> 0e32d3abbdb3f4976f4353cb680786228404e131
     color: #fff;
     padding: 6px 12px 9px 12px;
     font-size: 16px;
@@ -33,7 +37,10 @@
     right: 15px;
     bottom: 15px;
     transition: background 0.5s;
+<<<<<<< HEAD
     z-index: 999;
+=======
+>>>>>>> 0e32d3abbdb3f4976f4353cb680786228404e131
 }
 
 @media (max-width: 768px) {
@@ -188,11 +195,19 @@
 
 #blog .container {
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: 1fr 1fr;
 }
 
 .box{
     margin: 10px auto;
+=======
+    grid-template-columns: 1fr 2fr;
+}
+
+.box{
+    margin: 10px;
+>>>>>>> 0e32d3abbdb3f4976f4353cb680786228404e131
     position: relative;
 }
 
