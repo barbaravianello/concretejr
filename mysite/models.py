@@ -1,18 +1,18 @@
 from django.db import models
 from django.utils import timezone
 
-class Inicio(models.Model):
-    titulo = models.TextField('Titulo', max_length = 100, null = True, blank= True)
-    imagem = models.ImageField('Imagem', upload_to= 'quemsomos/imagens')
-    descricao = models.TextField('Descricao', blank= True , null = True)
+#class Inicio(models.Model):
+#    titulo = models.TextField('Titulo', max_length = 100, null = True, blank= True)
+#    imagem = models.ImageField('Imagem', upload_to= 'quemsomos/imagens')
+#    descricao = models.TextField('Descricao', blank= True , null = True)
     
-    class Meta:
-        verbose_name = "Inicio"
-        verbose_name_plural = "Inicio"      
+#    class Meta:
+#       verbose_name = "Inicio"
+#      verbose_name_plural = "Inicio"      
 
 class Quemsomos(models.Model):
-    titulo = models.CharField('Titulo', max_length = 100, blank= True , null = True)
-    imagem = models.ImageField('Imagem', upload_to= 'quemsomos/imagens')
+#    titulo = models.CharField('Titulo', max_length = 100, blank= True , null = True)
+#    imagem = models.ImageField('Imagem', upload_to= 'quemsomos/imagens')
     descricao = models.TextField('Descricao', blank= True , null = True)
 
     class Meta:
@@ -32,7 +32,6 @@ class Servicos(models.Model):
 class Portfolio(models.Model):
     titulo = models.TextField('Titulo', max_length = 100, null = True, blank= True)
     imagem = models.ImageField('Imagem', upload_to= 'portfolio/imagens')
-    imagemslide = models.ImageField('Imagem', upload_to= 'portfolio/imagenslide', null = True, blank= True)
     descricao = models.TextField('Descricao', blank= True , null = True)
 
     class Meta:
@@ -52,7 +51,7 @@ class Depoimentos (models.Model):
         verbose_name_plural = "Depoimentos" 
 
 class Parceiros(models.Model):
-    titulo = models.CharField('Titulo', max_length = 100, blank= True , null = True)
+#    titulo = models.CharField('Titulo', max_length = 100, blank= True , null = True)
     imagem = models.ImageField('Imagem', upload_to= 'parceiros/imagens')
 
     class Meta:

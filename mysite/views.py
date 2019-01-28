@@ -1,11 +1,11 @@
 # -*- coding:utf-8 -*-
 from django.shortcuts import render
 from django.shortcuts import render_to_response
-from .models import Inicio, Quemsomos, Servicos, Portfolio, Depoimentos, Parceiros
+from .models import Quemsomos, Servicos, Portfolio, Depoimentos, Parceiros
 from .forms import ContactForm
 
 def index(request):
-    inicio = Inicio.objects.last()
+#    inicio = Inicio.objects.last()
     quemsomos = Quemsomos.objects.last()
     portfolio = Portfolio.objects.all()
     servicos = Servicos.objects.all() 
@@ -13,7 +13,7 @@ def index(request):
     parceiros = Parceiros.objects.all()
 
     context={
-        'inicio':inicio,
+    #    'inicio':inicio,
         'quemsomos':quemsomos,
         'portfolio':portfolio,
         'servicos':servicos,
