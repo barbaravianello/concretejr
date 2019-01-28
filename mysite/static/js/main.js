@@ -114,7 +114,7 @@ jQuery(document).ready(function () {
 
 $(document).ready(function () {
   $(".menu-icon").on("click", function () {
-    $("#menu ul").toggleClass("showing");
+    $(".menu ul").toggleClass("showing");
   });
 });
 
@@ -137,9 +137,17 @@ $(document).ready(function () {
 
 $(window).on("scroll", function () {
   if ($(window).scrollTop()) {
-    $('#menu').addClass('blue');
+    $('.menu').addClass('blue');
   } else {
-    $('#menu').removeClass('blue');
+    $('.menu').removeClass('blue');
+  }
+});
+
+$(window).on("scroll", function () {
+  if ($(window).scrollTop()) {
+    $('#lgo').addClass('pink');
+  } else {
+    $('#lgo').removeClass('pink');
   }
 });
 

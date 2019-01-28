@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 {% load static %}
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicon/apple-touch-icon.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon/favicon.png' %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicon/apple-touch-icon.png' %}>
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon/favicon.png' %}>
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}>
     <link rel="manifest" href="/site.webmanifest">
     <!-- Favicon -->
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
     <!-- Font Awesome -->
-
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <!-- Animate -->
-    
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <!-- plugin -->
-
-    <link rel="stylesheet" href="{% static 'css/gallery.theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
     <link rel="stylesheet" href="{% static 'css/gallery.prefixed.css' %}">
-    
+    <link rel="stylesheet" href="{% static 'css/gallery.theme.css' %}">
     <title>Concrete</title>
 </head>
 
 <body>
+    <section id="bar-redes">
+        <nav id="redes">
+            <div class="txt-redes">
+                <p>UNP - Campus Natal</p>
+                <a href="#">
+                    <i class="fas fa-phone"></i>(84) 99999-9999
+                </a>
+                <a href="#">
+                    <i class="fas fa-at"></i>info@example.com
+                </a>
+            </div>
+            <ul>
+                <li><a href="https://www.facebook.com/concretejunior/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/concrete_jr/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </nav>
+    </section>
     <header id="topo">
-        <nav id="menu">
+        <nav class="menu">
             <div class="menu-icon">
                 <i class="fas fa-bars animated flipInY delay-3"></i>
             </div>
             <div id="logo">
-                <a href="index.html"><img src="{% static 'img/logo-white.png' %}" id="lgo" alt="Concrete" width="130px"></a>
+                <a href="index.html"><img src="{% static 'img/logo-white-simples.png' %}" id="lgo" alt="Concrete" width="150px" height="133px"></a>
             </div>
-            <ul class="nav-menu">
-                <li><a href="index.html">Início</a></li>
+            <ul id="nav-menu">
                 <li><a href="#quem-somos">Quem somos</a></li>
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#portfolio">Portfólio</a></li>
@@ -48,7 +62,7 @@
                 <li><a href="blog">Blog</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
-            <button class="btn-top" type="button">WhatsApp</button>
+            <button class="btn-top" type="button"><i class="fab fa-whatsapp"></i> &ensp;WhatsApp</button>
         </nav>
     </header>
 
@@ -57,73 +71,81 @@
     <section class="text-top">
         <div class="texto">
             <h1 class="animated fadeInDown delay-2">Concrete</h1>
-            <p class="animated fadeInDown delay-2.4s">Arquitetura / Engenharia</p>
+            <p class=" animated fadeInDown delay-2.4s">Arquitetura / Engenharia</p>
         </div>
         <a href="#quem-somos"><button class="btn-top-mid" type="button">Saiba Mais</button></a>
+    
     </section>
 
     <!-- Topo - Mid-->
 
     <section id="quem-somos" class="animou">
-        <h2 class="titulo">Quem somos</h2>
+        <h2 class="titulo2">Concrete</h2>
         <div class="content-quem">
             <div class="txt-left">
                 <p>{{ quemsomos.descricao |linebreaks |linebreaksbr}}</p>
             </div>
-            <div class="img-right">
-                <img src="{{ quemsomos.imagem.url }}" alt="concrete - Arquitetura e Engenharia">
+            <input type="checkbox" name="toggle" id="toggle">
+            <label for="toggle" id="lbl-swtich"></label>
+            <div class="mensagem-switch">
+                <img src="{% static 'img/sala1.png' %}" alt="sala" id="i1">
+                <img src="{% static 'img/sala3.png' %}" alt="sala" id="i3">
+                <img src="{% static 'img/sala4.png' %}" alt="sala" id="i4">
+                <img src="{% static 'img/sala5.png' %}" alt="sala" id="i5">
+                <img src="{% static 'img/sala6.png' %}" alt="sala" id="i6">
+                <img src="{% static 'img/sala7.png' %}" alt="sala" id="i7">
             </div>
         </div>
     </section>
 
     <!-- Quem somos -->
 
+
     <section id="servicos" class="animou">
         <h2 class="titulo">Serviços</h2>
         <div class="box">
-            {% for servicos in servicos %}
-                <div class="box-serv">
-                    <img src="{{ servicos.imagem.url }}" alt="serviço" width="200px">
-                    <h3> {{ servicos.titulo }} </h3>
-                    <p> {{ servicos.descricao  |linebreaksbr}} </p>
-                    <a href="#contato"><button type="button"><span>Solicitar Serviço</span></button></a>
-                </div>
-            {% endfor %}
+        {% for servicos in servicos %}
+            <div class="box-serv">
+                <img src="{{ servicos.imagem.url }}" alt="serviço" width="200px">
+                <h3>{{ servicos.titulo }} </h3>
+                <p> {{ servicos.descricao  |linebreaksbr}}</p>
+                <button type="button"><span>Solicitar Serviço</span></button>
+            </div>
+        {% endfor %}
         </div>
     </section>
-
     <!-- Serviços -->
-    
+
     <section id="portfolio" class="animou">
-        <h2 class="titulo">Portfólio</h2>
+        <h2 class="titulo2">Portfólio</h2>
         <div id="filter">
             <button class="btn active" onclick="filterSelection('all')">Todos</button>
             {% for port in portfolio %}
-                <button class="btn" onclick="filterSelection('{{port.titulo}}')">{{port.titulo}}</button>
+            <button class="btn" onclick="filterSelection('{{port.titulo}}')">{{port.titulo}}</button>
             {% endfor %}
         </div>
         <div class="row">
         {% for port in portfolio %}
-            <div class="column {{port.titulo}} ">
+            <div class="column {{port.titulo}}">
                 <div class="content">
-                    <img src="{{port.imagem.url}}" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="Car" style="width:100%">
+                    <img src="{{port.imagem.url}}"" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="Car"
+                        style="width:100%">
                     <h4>{{port.titulo}}</h4>
                     <p>{{port.descricao|truncatechars:59}}</p>
                 </div>
             </div>
-        {% endfor %}  
+            {% endfor %} 
         </div>
     </section>
 
     <div id="myModal" class="modal">
         <span class="close cursor" onclick="closeModal()">&times;</span>
         <div class="modal-content">
-
-            {% for port in portfolio %}   
-                <div class="mySlides">
-                    <img src="{{port.imagem.url}}" style="width:100%">
-                </div>
-            {% endfor %}  
+         {% for port in portfolio %}   
+            <div class="mySlides">
+                <img src="{{port.imagem.url}}" style="width:100%">
+            </div>
+        {% endfor %}
 
             <!-- controles -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -133,33 +155,32 @@
 
     <!-- Portfólio -->
 
+
     <section id="depoimentos" class="animou">
         <div class="gallery autoplay items-2">
+            <div id="item-1" class="control-operator"></div>
+            <div id="item-2" class="control-operator"></div>
             {% for dep in depoimentos %}
-                <div id="item-{{dep.atalho}}" class="control-operator"></div>
-            {% endfor %}
 
-            {% for dep in depoimentos %}
-                <figure class="item">
-                    <img src="{{ dep.imagem.url }}" alt="Depoimento">
-                    <div class="comentario">
-                        <p class="depoimento-com">{{ dep.descricao }}</p>
-                        <p class="nome-com"> &lt; {{ dep.autor }} &gt;</p>
-                    </div>
-                </figure>
+            <figure class="item">
+                <img src="{{ dep.imagem.url }}" alt="Depoimento">
+                <div class="comentario">
+                    <p class="depoimento-com">"{{ dep.descricao }}"</p>
+                    <p class="nome-com"> &lt; {{ dep.autor }} &gt;</p>
+                </div>
+            </figure>
+
             {% endfor %}
 
             <div class="controls">
-                {% for dep in depoimentos %}
-                    <a href="#item-{{dep.atalho}}" class="control-button">•</a>
-                {% endfor %}
+                <a href="#item-1" class="control-button">•</a>
+                <a href="#item-2" class="control-button">•</a>
+                
             </div>
-        </div>
     </section>
-
     <!-- Depoimentos -->
-    
-    <section id="parceiros" class="animou">
+
+     <section id="parceiros" class="animou">
         <h2 class="titulo">Parceiros</h2>
         <div class="container">
             <section class="customer-logos slider">
@@ -170,6 +191,7 @@
         </div>
     </section>
     
+
     <!-- Parceiros -->
 
     <section id="contato" class="animou">
@@ -233,7 +255,7 @@
     <footer>
         <div class="media">
             <ul>
-                <li><a href="https://www.facebook.com/concretejunior/" target="_blank" class="fab fa-facebook"></a></li>
+                <li><a href="https://www.facebook.com/concretejunior/" target="_blank" class="fab fa-facebook"></i></a></li>
                 <li><a href="https://www.instagram.com/concrete_jr/" target="_blank"><i class="fab fa-instagram"></i></a></li>
                 <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -248,7 +270,33 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:4,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:true
+                },
+                600:{
+                    items:3,
+                    nav:false
+                },
+                1000:{
+                    items:1,
+                    nav:false,
+                    loop:false
+                }
+            }
+        })
+    </script>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 
 </html>
